@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                         // Çıktı JavaScript sürümü
+    "module": "CommonJS",                     // Modül çözümlemesi
+    "lib": ["ES6"],                           // Kullanılan API kütüphaneleri
+    "declaration": true,                      // .d.ts tanımlama dosyalarını oluşturur
+    "outDir": "./dist",                       // Derleme çıktısı için klasör
+    "rootDir": "./src",                       // Girdi dosyalarının kök klasörü
+    "strict": true,                           // Tüm sıkı tip denetleme seçeneklerini açar
+    "esModuleInterop": true,                  // ES modülleri ile CommonJS uyumluluğu sağlar
+    "skipLibCheck": true,                     // .d.ts dosyalarındaki hataları atlar
+    "forceConsistentCasingInFileNames": true  // Dosya adlarındaki büyük/küçük harf duyarlılığı
+  },
+  "include": ["src/**/*"],                    // Derlenecek dosyalar
+  "exclude": ["node_modules", "dist"]         // Derleme dışında bırakılacak dosya ve klasörler
+}
+

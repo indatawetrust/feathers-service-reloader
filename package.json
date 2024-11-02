@@ -1,0 +1,50 @@
+{
+  "name": "feathers-service-reloader",
+  "version": "0.0.1",
+  "description": "A plugin for FeathersJS v5 to enable real-time service reloading during development",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon --ignore src/services/ -x ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "feathersjs",
+    "service reloader",
+    "hot reload",
+    "typescript",
+    "plugin"
+  ],
+  "author": "cond",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.x.x",
+    "release-it": "^17.10.0",
+    "ts-node": "^10.x.x",
+    "typescript": "^4.x.x"
+  },
+  "peerDependencies": {
+    "@feathersjs/feathers": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "${version}",
+      "requireCleanWorkingDir": true
+    },
+    "npm": {
+      "publish": true,
+      "ignoreVersion": true
+    },
+    "hooks": {
+      "before:init": "npm test",
+      "before:git:bump": "npm run build"
+    }
+  }
+}
