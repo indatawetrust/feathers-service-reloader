@@ -8,7 +8,8 @@
     "build": "tsc",
     "dev": "nodemon --ignore src/services/ -x ts-node src/index.ts",
     "start": "node dist/index.js",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "release": "release-it"
   },
   "keywords": [
     "feathersjs",
@@ -43,7 +44,6 @@
       "ignoreVersion": true
     },
     "hooks": {
-      "before:init": "npm test",
       "before:git:bump": "npm run build"
     }
   }
