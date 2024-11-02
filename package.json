@@ -20,6 +20,14 @@
   ],
   "author": "cond",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/indatawetrust/feathers-service-reloader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/indatawetrust/feathers-service-reloader/issues"
+  },
+  "homepage": "https://github.com/indatawetrust/feathers-service-reloader#readme",
   "devDependencies": {
     "nodemon": "^2.x.x",
     "release-it": "^17.10.0",
