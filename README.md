@@ -40,6 +40,14 @@ if (process.env.NODE_ENV === 'development') {
 ## Configuration
 feathers-service-reloader uses a default configuration to watch for changes in *.class.ts, *.schema.ts, *.shared.ts, and *.ts files within the services directory. When a change is detected, the service is automatically reloaded, and AJV schemas associated with the service are removed and refreshed.
 
+## Updating validators.ts
+To ensure proper schema reloading, make sure that dataValidator in your validators.ts file is set up as follows:
+
+```js
+export const dataAjv = new Ajv({});
+export const dataValidator: Ajv = addFormats(dataAjv, formats);
+```
+
 ## Recommended dev Script
 To prevent nodemon from restarting your application when files in the src/services/ directory are modified, you can use the following dev script in your package.json:
 
