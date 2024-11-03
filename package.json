@@ -1,6 +1,6 @@
 {
   "name": "feathers-service-reloader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A plugin for FeathersJS v5 to enable real-time service reloading during development",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
